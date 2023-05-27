@@ -88,7 +88,7 @@ export default {
           item.reward = individualReward
           this.resultText = this.items
             .filter(item => item.name !== '')
-            .map(item => `${item.name} : ${item.reward} (+${item.percentage}%)`)
+            .map(item => `${item.name} : ${Math.floor(item.reward)} (+${item.percentage}%)`)
             .join('\n');
           return Math.floor(individualReward).toLocaleString();
         } else {
@@ -96,7 +96,7 @@ export default {
           item.reward = individualReward
           this.resultText = this.items
             .filter(item => item.name !== '')
-            .map(item => `${item.name} : ${item.reward} (+${item.percentage}%)`)
+            .map(item => `${item.name} : ${Math.floor(item.reward)} (+${item.percentage}%)`)
             .join('\n');
           return Math.floor(individualReward).toLocaleString();
         }
